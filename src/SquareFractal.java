@@ -5,6 +5,7 @@ import com.raylib.java.core.input.Keyboard;
 import com.raylib.java.raymath.Vector2;
 import com.raylib.java.utils.Tracelog;
 import utils.RaylibContext;
+import utils.Square;
 
 import java.util.ArrayList;
 
@@ -92,22 +93,5 @@ public class SquareFractal {
 		rl.core.CloseWindow();
 	}
 	
-	static class Square {
-		public int     sideLength;
-		public Color   color;
-		public Vector2 pos;
-		public Raylib  rl;
-		
-		public Square(int sideLength , Color color , Vector2 pos , Raylib rl) {
-			this.sideLength = sideLength;
-			this.color      = color;
-			this.pos        = pos;
-			this.rl         = rl;
-		}
-		
-		public void draw() {
-			this.rl.shapes.DrawRectangleV(this.pos , new Vector2(sideLength , sideLength) , this.color);
-		}
-	}
 	
 }
